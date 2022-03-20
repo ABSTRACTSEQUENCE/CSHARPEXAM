@@ -67,17 +67,17 @@ namespace EXAM
         {     // если check = false, то метод улучшит все улучшаемые предметы
 			int counter = 0;
 			item upgradable = null;
-			foreach(item i in items)
+			for(int i = 0; i < items.Count; i++)
             {
 				if (counter >= 3)
 				{
-					upgradable = i;
+					upgradable = items[i-1];
 					break;
 				}
 				counter = 0;
 				foreach (item j in items)
 				{
-					if (i.name == j.name)
+					if (items[i].name == j.name)
 						counter++;
 				}
             }
