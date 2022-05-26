@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EXAM
 {
-	 class item
+	 class item //нет
 	{
 		public string name { get; set; }
 		public int dmg { get; set; }

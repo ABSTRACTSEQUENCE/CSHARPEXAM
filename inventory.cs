@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Text; //концовки в игре нет, тодько умереть можно
 using System.Threading.Tasks;
 
 namespace EXAM
 {
 	class inventory
 	{
-		public List<item> items = new List<item>();
+		public List<item> items = new List<item>(); 
 		public item equipped;
 		public void add(item item)
 		{
@@ -49,7 +49,7 @@ namespace EXAM
 				}
 				Console.WriteLine($">{i.name} ({i.dmg})");
 			}
-		}
+		} //экипировано. У игрока может быть много оружий
 		public void equip(item item)
         {
 			if (!items.Contains(item))
@@ -62,14 +62,14 @@ namespace EXAM
 			equipped = item;
 			item.equiped = true;
         }
-		//метод upgrade работает криво
+		//уже работает, я починил
 		public bool upgrade(bool check) // если check = true, то метод просто проверит можно ли улучшить предмет
         {     // если check = false, то метод улучшит все улучшаемые предметы
 			int counter = 0;
 			item upgradable = null;
 			for(int i = 0; i < items.Count; i++)
             {
-				if (counter >= 3)
+				if (counter >= 3) //this- это ссылка на объект класса для которого вызывается метод
 				{
 					upgradable = items[i-1];
 					break;

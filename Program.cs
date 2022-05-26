@@ -198,7 +198,7 @@ namespace EXAM
                         player_inv.add(item);
                         Console.ReadKey();
                         break;
-                    case 50: //Не повезло, не повезло
+                    case 50:
                         Console.WriteLine("\nНа вас напала сама Смерть... Удачи...");
                         Console.ReadKey();
                         if (!fight(death))
@@ -211,7 +211,6 @@ namespace EXAM
                             player.lvlup(99999);
                         }
                         break;
-
                 }
             }
             bool fight(enemy enemy) //если возвращает false, то игрок умер, если true, то выжил
